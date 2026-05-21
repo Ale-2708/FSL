@@ -1,0 +1,63 @@
+html{
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+}
+
+.centro{
+    text-align: center;
+}
+
+.container {
+    padding: 0.625em;;
+}
+
+.flex {
+    display: flex;
+}
+
+.container > img {
+    width: 100%;
+}
+
+.reverse{
+    flex-direction: row-reverse;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+
+.box, .box2{
+    width: 50%;
+}
+
+.box4{
+    width: 66.33333%;
+}
+
+.box3 {
+    width: 33.33333%;
+
+}
+
+@media screen and (max-width: 900px){
+    html {
+        font-size: 12px;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:500px){
+    html {
+        font-size: 8px;
+    }
+
+    .box, .box2, .box3, .box4 {
+        width: 100%;
+    }
+    
+}
