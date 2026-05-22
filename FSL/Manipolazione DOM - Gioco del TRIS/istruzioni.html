@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tris Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header"> Istruzioni </div>
+
+    <div class="istruzioni">
+
+        <div class="warning">
+            <h2>ATTENZIONE:</h2>
+            <ul>
+                <li>Implementare le funzioni <code>giocata(row, col)</code> e <code>nuovaPartita()</code> presenti nel file <code>script.js</code></li>
+                <li>Non modificare la firma delle funzioni</li>
+                <li>Non modificare gli altri file</li>
+                <li>Consegnare solo il file <code>script.js</code></li>
+            </ul>            
+        </div>
+
+        <div>
+            <h2>ISTRUZIONI</h2>
+            <ul>
+                <li>Terminare la realizzazione del gioco del tris, implementando le funzioni <code>giocata(row, col)</code> e <code>nuovaPartita()</code> già presenti nel file <code>script.js</code></li>
+                <li>Le funzioni sono già collegate ad eventi inseriti nell'html</li>
+                <li>L'header della pagina riporta il giocatore di turno, ovvero quello che deve effettuare la prossima mossa. Inizialmente è X</li>
+                <li>Il giocatore di turno effettua la sua mossa, cliccando su una cella del tris</li>
+                <li>Se viene cliccata una cella già occupata:
+                    <ul>
+                        <li>Eseguire l'alert del messaggio "Posizione gà occupata." <span class="punteggio">5</span></li>
+                    </ul>
+                </li>
+                <li>Se viene cliccata una cella libera:
+                    <ul>
+                        <li>Inserire nella cella il simbolo del giocatore utilizzando uno dei seguenti codici html: <span class="punteggio">20</span>
+                            <ul>
+                                <li><code>&lt;div class="x"&gt;X&lt;/div&gt;</code></li>
+                                <li><code>&lt;div class="o"&gt;O&lt;/div&gt;</code></li>
+                            </ul>
+                        </li>
+                        <li>Cambiare il giocatore di turno sostituendo, nell'header, il codice <code>&lt;div class="x"&gt;X&lt;/div&gt;</code> con <code>&lt;div class="o"&gt;O&lt;/div&gt;</code> o viceversa  <span class="punteggio">15</span>  </li>
+                    </ul>
+                </li>
+                <li>Implementare inoltre le seguenti operazioni:
+                    <ul>
+                        <li>Quando la partita è terminata scrivere nel footer uno dei seguenti testi: <span class="punteggio">15</span>
+                            <ul>
+                                <li>Ha vinto X</li>
+                                <li>Ha vinto O</li>
+                                <li>Partita Pari</li>
+                            </ul>
+                        </li>
+                        <li>Quando la partita è terminata, ogni ulteriore click sulle celle deve generare l'alert del messaggio "Partita finita" e nessuna altra modifica deve essere fatta. <span class="punteggio">5</span></li>
+                        <li>La funzione <code>nuovaPartita()</code> deve svuotare tutte le celle e deve ripristinare il turno iniziale al giocatore X <span class="punteggio">10</span></li>
+                    </ul>
+                </li>
+                <li>Per verificare se la partita è terminata utilizzare la funzione <code>chiHaVinto()</code> già disponibile nel file <code>chihavinto.js</code>. La funzione non ha parametri e restituisce i seguenti valori:
+                    <ul>
+                        <li><code>undefined</code> se la partita è in corso</li>
+                        <li><code>"x"</code> se ha vinto il giocatore X</li>
+                        <li><code>"o"</code> se ha vinto il giocatore O</li>
+                        <li><code>"pari"</code> se la partita è terminata pari</li>
+                        <li class="warning"><strong>Attenzione:</strong> La funzione <code>chiHaVinto()</code> restituisce risultati corretti solo se vengono rispettate tutte le specifiche dei punti precedenti</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2>VALUTAZIONE</h2>
+            Ogni funzionalità assegna, al massimo, i punti riportati nel riquadro rosso <span class="punteggio">&nbsp;&nbsp;&nbsp;</span>.
+            Verranno inoltre valutati i seguenti aspetti:
+            <ul>
+                <li>Rispetto delle specifiche <span class="punteggio">10</span></li>
+                <li>Pulizia e leggibilità del codice <span class="punteggio">10</span></li>
+                <li>Assenza di duplicazioni <span class="punteggio">10</span></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tris Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">       
+        <div>E' il turno di:</div>
+        <div class="x">X</div>
+    </div>
+
+    <div class="subheader">
+        <a href="istruzioni.html" target="_blank">Istruzioni</a>
+        <a class="btn" onclick="nuovaPartita()">Nuova Partita</a>
+    </div>
+
+    <div class="game">
+        <div id="grid">
+            <div class="row">
+                <div class="cella" onclick="giocata(0,0)"></div>
+                <div class="cella" onclick="giocata(0,1)"></div>
+                <div class="cella" onclick="giocata(0,2)"></div>
+            </div>
+
+            <div class="row">
+                <div class="cella" onclick="giocata(1,0)"></div>
+                <div class="cella" onclick="giocata(1,1)"></div>
+                <div class="cella" onclick="giocata(1,2)"></div>
+            </div>
+
+            <div class="row">
+                <div class="cella" onclick="giocata(2,0)"></div>
+                <div class="cella" onclick="giocata(2,1)"></div>
+                <div class="cella" onclick="giocata(2,2)"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+
+    <script src="script.js"></script>
+    <script src="chihavinto.js"></script>
+</body>
+</html>

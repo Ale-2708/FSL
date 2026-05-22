@@ -2,7 +2,7 @@ function Eratostene(num){
     let arr = []
 
     for(let i=0; i<= num; i++){
-        arr.push(i);
+        arr.push(true);
     }
 
     let finito = false
@@ -12,9 +12,9 @@ function Eratostene(num){
         let trovato = false
         let tmpindex
         for(let i = index+1; i < arr.length; i++){
-            if(i % index == 0){
-                arr[i] = null
-            } else if(arr[i] != null){
+            if(i % index == 0 && arr[i] == true){
+                arr[i] = false
+            } else if(arr[i] != false){
                 if(!trovato){
                     trovato = true
                     tmpindex = i
@@ -32,17 +32,15 @@ function Eratostene(num){
 
 
     for(let i=2; i<arr.length; i++) {
-        if(arr[i] != null){
-            s += arr[i]
+        if(arr[i] == true){
+            s += i
             s+= " "
         }
     }
-
-    s.trimEnd();
 
     return s
 }
 
 
-let n = 100
+let n = 1000000
 console.log(Eratostene(n))

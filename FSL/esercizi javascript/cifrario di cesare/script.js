@@ -6,6 +6,11 @@ function cifratura(msg, k){
 
     k = k%26;
 
+    if(k < 0){
+        k = 26 + k 
+    }
+
+
     for(let i=0; i < msg.length; i++){
         let trovato = false
         for(let j = 0; j < alfabetoMn.length; j++){
