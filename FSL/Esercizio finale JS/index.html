@@ -12,7 +12,7 @@
 <body class="bg-light">
     <div class="container">
         <h1 class="my-5">Users</h1>
-        <form class="mb-3 row">
+        <form class="mb-3 row" onsubmit="filter(event);return false">
             <div class="col-10">
                 <input type="text" class="form-control form-control-sm" id="searchInputText" placeholder="Filter user">
             </div>
@@ -24,14 +24,14 @@
         <table class="table table-hover table-striped mt-4">
             <thead>
                 <tr>
-                    <th><span><span>Last Name</span> <i class="bi bi-sort-alpha-down"></i></span></th>
-                    <th><span><span>First Name</span> <i class="bi bi-sort-alpha-down d-none"></i></span></th>
-                    <th><span><span>Gender</span> <i class="bi bi-sort-alpha-down d-none"></i></span></th>
-                    <th><span><span>Age</span> <i class="bi bi-sort-numeric-down d-none"></i></span></th>
-                    <th><span><span>Height</span> <i class="bi bi-sort-numeric-down d-none"></i></span></th>
-                    <th><span><span>Weight</span> <i class="bi bi-sort-numeric-down d-none"></i></span></th>
-                    <th><span><span>Eye Color</span> <i class="bi bi-sort-alpha-down d-none"></i></span></th>
-                    <th><span><span>Hair</span> <i class="bi bi-sort-alpha-down d-none"></i></span></th>
+                    <th><span><span class="span-filter" id="lastName">Last Name</span> <i class="bi bi-sort-alpha-down"></i></span></th>
+                    <th><span><span class="span-filter" id="firstName">First Name</span> <i class="bi bi-sort-alpha-down d-none"></i></span></th>
+                    <th><span><span class="span-filter" id="gender">Gender</span> <i class="bi bi-sort-alpha-down d-none"></i></span></th>
+                    <th><span><span class="span-filter" id="age">Age</span> <i class="bi bi-sort-numeric-down d-none"></i></span></th>
+                    <th><span><span class="span-filter" id="height">Height</span> <i class="bi bi-sort-numeric-down d-none"></i></span></th>
+                    <th><span><span class="span-filter" id="weight">Weight</span> <i class="bi bi-sort-numeric-down d-none"></i></span></th>
+                    <th><span><span class="span-filter" id="eyeColor">Eye Color</span> <i class="bi bi-sort-alpha-down d-none"></i></span></th>
+                    <th><span><span class="span-filter" id="hair">Hair</span> <i class="bi bi-sort-alpha-down d-none"></i></span></th>
                 </tr>
             </thead>
             <tbody>                
