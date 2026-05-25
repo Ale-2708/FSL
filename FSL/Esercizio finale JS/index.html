@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio Js Finale</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+    <div class="container">
+        <h1 class="my-5">Users</h1>
+        <form class="mb-3 row">
+            <div class="col-10">
+                <input type="text" class="form-control form-control-sm" id="searchInputText" placeholder="Filter user">
+            </div>
+            <div class="col-2">
+                <button type="submit" class="btn btn-primary btn-sm w-100">Submit</button>
+            </div>
+        </form>
+
+        <table class="table table-hover table-striped mt-4">
+            <thead>
+                <tr>
+                    <th><span><span>Last Name</span> <i class="bi bi-sort-alpha-down"></i></span></th>
+                    <th><span><span>First Name</span> <i class="bi bi-sort-alpha-down d-none"></i></span></th>
+                    <th><span><span>Gender</span> <i class="bi bi-sort-alpha-down d-none"></i></span></th>
+                    <th><span><span>Age</span> <i class="bi bi-sort-numeric-down d-none"></i></span></th>
+                    <th><span><span>Height</span> <i class="bi bi-sort-numeric-down d-none"></i></span></th>
+                    <th><span><span>Weight</span> <i class="bi bi-sort-numeric-down d-none"></i></span></th>
+                    <th><span><span>Eye Color</span> <i class="bi bi-sort-alpha-down d-none"></i></span></th>
+                    <th><span><span>Hair</span> <i class="bi bi-sort-alpha-down d-none"></i></span></th>
+                </tr>
+            </thead>
+            <tbody>                
+            </tbody>
+        </table>
+        <nav class="d-flex justify-content-center">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" onclick="research(-1)">Previous</a></li>
+                <li class="page-item"><a class="page-link actual-page" onclick="insertUser(1)" id="pagina1">1</a></li>
+                <li class="page-item"><a class="page-link" onclick="insertUser(2)" id="pagina2">2</a></li>
+                <li class="page-item"><a class="page-link" onclick="insertUser(3)" id="pagina3">3</a></li>
+                <li class="page-item"><a class="page-link" onclick="insertUser(4)" id="pagina4">4</a></li>
+                <li class="page-item"><a class="page-link" onclick="insertUser(5)" id="pagina5">5</a></li>
+                <li class="page-item"><a class="page-link" onclick="insertUser(6)" id="pagina6">6</a></li>
+                <li class="page-item"><a class="page-link" onclick="insertUser(7)" id="pagina7">7</a></li>
+                <li class="page-item"><a class="page-link" onclick="insertUser(8)" id="pagina8">8</a></li>
+                <li class="page-item"><a class="page-link" onclick="insertUser(9)" id="pagina9">9</a></li>
+                <li class="page-item"><a class="page-link" onclick="insertUser(10)" id="pagina10">10</a></li>
+                <li class="page-item"><a class="page-link" onclick="insertUser(11)" id="pagina11">11</a></li>
+                <li class="page-item"><a class="page-link" onclick="research(1)">Next</a></li>
+            </ul>
+        </nav>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+th > span
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.actual-page, .actual-page:hover {
+    background-color: #a6dced;
+}
