@@ -3,8 +3,26 @@ async function insertUser(pagina, filtro){
         let a = document.getElementsByClassName("actual-page")[0]
         pagina = parseInt(a.id[a.id.length -1] ,10) 
     }
+
+    if(filtro == undefined){
+        filtro = filtroPrecedente[0]
+    } else {
+        if(filtro == filtroPrecedente[0]){
+            if(filtroPrecedente[1] == `desc`){
+                filtroPrecedente[0] = undefined
+                filtroPrecedente[1] = ``
+                filtro = undefined  
+            } else {
+                filtroPrecedente[1] = filtroPrecedente[1] == `` ? `asc` : `desc`
+            }
+        } else {
+            filtroPrecedente[0] = filtro
+            filtroPrecedente[1] = `asc`
+        }
+    }
     
-    let URL = filtro != undefined ? `https://dummyjson.com/users?sortBy=${filtro}&order=asc&limit=20&skip=${(pagina-1) * 20}&select=lastName,firstName,gender,age,height,weight,eyeColor,hair` : `https://dummyjson.com/users?limit=20&skip=${(pagina-1) * 20}&select=firstName,lastName,gender,age,height,weight,eyeColor,hair`
+    
+    let URL = filtro != undefined ? `https://dummyjson.com/users?sortBy=${filtro}&order=${filtroPrecedente[1]}&limit=20&skip=${(pagina-1) * 20}&select=lastName,firstName,gender,age,height,weight,eyeColor,hair` : `https://dummyjson.com/users?limit=20&skip=${(pagina-1) * 20}&select=firstName,lastName,gender,age,height,weight,eyeColor,hair`
     let result = await fetch(URL)
     let json = await result.json()
     let utenti = json.users
@@ -59,7 +77,6 @@ function research(spostamento){
 }
 
 async function filter(event) {
-    event.preventDefault();
     let input = document.getElementsByTagName("input")[0]
     let URL = `https://dummyjson.com/users/search?q=${input.value}`
     let result = await fetch(URL)
@@ -84,6 +101,8 @@ async function filter(event) {
     });
 }
 
+
+let filtroPrecedente = [undefined, ``]
 insertUser(1)
 
 let span = document.getElementsByClassName("span-filter")
@@ -93,6 +112,8 @@ for (const element of span) {
         insertUser(undefined, e.target.id);
     });
 }
+
+
 
 /*Cose che non so fare:
     aggiugere l'event listener (questo sopra)
