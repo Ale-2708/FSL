@@ -1,0 +1,11 @@
+<div *ngIf="product" class="card">
+        <img [src]="product.thumbnail" class="card-img-top" [alt]="product.title">
+        <div class="card-body">
+            <h5 class="card-title">{{product.title}}</h5>
+            <p class="card-text">{{product.price}}€</p>
+            <a (click)="_buttonClicked()" class="btn btn-primary">Acquista</a>
+            <!-- [routerLink] = "['products', product.id]"-->
+        </div>
+</div>
+
+<div *ngIf="!product">Errore di caricamento</div>

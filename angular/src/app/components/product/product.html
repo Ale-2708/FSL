@@ -1,0 +1,22 @@
+<ng-container *ngIf="product != undefined">
+    <div class="d-flex flex-wrap ">
+        <div class="box1">
+            <img [src]="product.images[0]">
+        </div>
+
+        <div class="box2">
+            <h2>{{product.title}}</h2>
+            <h3>{{product.price}}€</h3>
+            <button type="button" class="btn btn-primary" (click)="AddToCart()">Acquista</button>
+        </div>
+        
+        
+
+    </div>
+
+    <div>
+        <app-review-table *ngFor="let review of product.reviews" [review]="review"></app-review-table>
+    </div>
+    
+    
+</ng-container>

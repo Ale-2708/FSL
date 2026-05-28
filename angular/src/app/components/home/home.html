@@ -1,0 +1,7 @@
+<ng-container *ngIf="products">
+    <p>Sono stati trovati {{products.total}} prodotti</p>
+
+    <div class="d-flex flex-wrap justify-content-around gap-4 py-5">
+        <app-product-card *ngFor="let product of products.products" [product]="product" (buttonClicked)="goToProduct($event)"></app-product-card>
+    </div>
+</ng-container>

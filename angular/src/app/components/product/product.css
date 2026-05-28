@@ -1,0 +1,19 @@
+.box1 {
+    width: 50%;
+}
+
+.box2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.box2 > h2,.box2 > h3 {
+    text-align: center;
+    font-size: 30px;
+} 
+
