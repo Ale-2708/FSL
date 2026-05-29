@@ -1,0 +1,16 @@
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1" routerLink="/">Smartphone Shop</span>
+    <div routerLink="/carrello" class=""carrello>
+      <i class="cart bi bi-cart2">
+        <span class="position-absolute top-50  translate-middle badge rounded-pill bg-danger" id="contatore">
+            {{cartCount}}
+            <span class="visually-hidden">unread messages</span>
+        </span>
+      </i>
+      <!-- <span class="badge text-bg-danger">{{cartCount}}</span> -->
+      
+    </div>
+    
+  </div>
+</nav>

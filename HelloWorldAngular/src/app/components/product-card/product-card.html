@@ -1,0 +1,9 @@
+    <div *ngIf="product" class="card">
+        <img [src]="product.thumbnail" class="card-img-top m-1" [alt]="product.title">
+        <div class="card-body d-flex flex-column my-1">
+            <h5 class="card-title">{{product.title}}</h5>
+            <p class="card-text text-end">{{product.price}}€</p>
+            <a (click)="_buttonClicked()" class="btn btn-primary">Acquista</a>
+        </div>
+    </div>
+    <div *ngIf="!product">Errore di caricamento</div>

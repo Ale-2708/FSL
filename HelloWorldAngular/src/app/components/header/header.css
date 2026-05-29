@@ -1,0 +1,14 @@
+.bi-cart2 {
+    font-size: 2em;
+
+}
+
+#contatore{
+    font-size: 0.33em;
+    top: 25% !important;
+    left: 99% !important;
+}
+
+.carrello{
+    padding-right: 10%;
+}

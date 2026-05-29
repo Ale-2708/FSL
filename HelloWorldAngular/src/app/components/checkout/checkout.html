@@ -1,0 +1,6 @@
+<form [formGroup]="checkoutForm">
+    <input type="text" formControlName="cognome">
+    <input type="text" formControlName="nome">
+    <input type="email" formControlName="email">
+    <button [disabled]="checkoutForm.invalid" type="button" class="btn btn-primary" (click)="Conferma()">Clicca Qua</button>
+</form>

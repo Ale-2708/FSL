@@ -1,0 +1,41 @@
+<div class="container" *ngIf="product">
+    <div class="card my-3">
+    <div class="row g-0 align-items-center">
+        <div class="col-md-6">
+        <img [src]="product.images[0]" class="img-fluid rounded-start" [alt]="product.title">
+        </div>
+        <div class="col-md-6">
+        <div class="card-body text-center">
+            <h3 class="card-title">{{product.title}}</h3>
+            <p class="card-text">{{product.price}}€</p>
+            <a class="btn btn-primary" (click)="addToCart()">Aggiungi a carrello</a>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <h2>Reviews</h2>
+
+    <div *ngFor="let review of product.reviews" class="card my-3">
+        <div class="card-header d-flex justify-content-between">
+            <div>
+                {{review.date | date:'dd.MM.yyyy' }} - {{review.reviewerName}}
+            </div>
+            <div>
+                <i class="bi mx-1 text-warning" [class.bi-star]="review.rating<1" [class.bi-star-fill]="review.rating>=1"></i>
+                <i class="bi mx-1 text-warning" [class.bi-star]="review.rating<2" [class.bi-star-fill]="review.rating>=2"></i>
+                <i class="bi mx-1 text-warning" [class.bi-star]="review.rating<3" [class.bi-star-fill]="review.rating>=3"></i>
+                <i class="bi mx-1 text-warning" [class.bi-star]="review.rating<4" [class.bi-star-fill]="review.rating>=4"></i>
+                <i class="bi mx-1 text-warning" [class.bi-star]="review.rating<5" [class.bi-star-fill]="review.rating>=5"></i>
+            </div>
+        </div>
+        <div class="card-body">
+            <figure>
+            <blockquote class="blockquote">
+                <p>{{review.comment}}</p>
+            </blockquote>
+            </figure>
+        </div>
+        </div>
+
+</div>
